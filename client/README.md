@@ -23,3 +23,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 [motion](https://motion.dev/)
 [framer_motion](https://framermotion.framer.website/)
 [lucide react](https://lucide.dev/guide/)
+[react-toastify](https://github.com/fkhadra/react-toastify)
