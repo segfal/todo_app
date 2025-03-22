@@ -1,13 +1,23 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+"use client"
 
-const Home = () => {
-  return <Card>
-    <CardHeader>
-      <CardTitle>Card Title</CardTitle>
-    </CardHeader>
-  </Card>;
+import { TodoList } from "@/components/TodoList"
+import { ThemeToggle } from "@/components/ThemeToggle"
+import { ThemeProvider } from "next-themes"
+
+export default function Home() {
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <main className="min-h-screen bg-gradient-to-b from-background to-muted transition-colors duration-300">
+        <ThemeToggle />
+        <div className="container py-8">
+          <TodoList />
+        </div>
+      </main>
+    </ThemeProvider>
+  )
 }
-
-
-export default Home;
